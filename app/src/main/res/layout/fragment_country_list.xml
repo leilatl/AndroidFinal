@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CountryListFragment"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="10dp"
+    android:background="@android:color/holo_green_light">
+    
+    <Button
+        android:id="@+id/indiaBtn"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="India"/>
+    <Button
+        android:id="@+id/usaBtn"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="USA"/>
+    <Button
+        android:id="@+id/australiaBtn"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Australia"/>
+    <Button
+        android:id="@+id/russiaBtn"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Russia"/>
+    <Button
+        android:id="@+id/franceBtn"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="France"/>
+    <Button
+        android:id="@+id/ukBtn"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="UK"/>
+
+    
+
+</LinearLayout>

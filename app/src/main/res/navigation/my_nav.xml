@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/countryListFragment">
+
+    <fragment
+        android:id="@+id/countryListFragment"
+        android:name="com.example.afinal.CountryListFragment"
+        android:label="fragment_country_list"
+        tools:layout="@layout/fragment_country_list" >
+        <action
+            android:id="@+id/toCategory"
+            app:destination="@id/categoryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/categoryFragment"
+        android:name="com.example.afinal.categoryFragment"
+        android:label="fragment_category"
+        tools:layout="@layout/fragment_category" >
+        <action
+            android:id="@+id/action_categoryFragment_to_newsListFragment"
+            app:destination="@id/newsListFragment" />
+        <argument
+            android:name="country"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/newsListFragment"
+        android:name="com.example.afinal.NewsListFragment"
+        android:label="fragment_news_list"
+        tools:layout="@layout/fragment_news_list" >
+        <action
+            android:id="@+id/action_newsListFragment_to_newsDetailFragment"
+            app:destination="@id/newsDetailFragment" />
+        <argument
+            android:name="country"
+            app:argType="string" />
+        <argument
+            android:name="category"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/newsDetailFragment"
+        android:name="com.example.afinal.newsDetailFragment"
+        android:label="fragment_news_detail"
+        tools:layout="@layout/fragment_news_detail" >
+        <action
+            android:id="@+id/action_newsDetailFragment_to_countryListFragment"
+            app:destination="@id/countryListFragment" />
+        <argument
+            android:name="Author"
+            app:argType="string" />
+        <argument
+            android:name="Date"
+            app:argType="string" />
+        <argument
+            android:name="Title"
+            app:argType="string" />
+        <argument
+            android:name="ImageURL"
+            app:argType="string" />
+        <argument
+            android:name="Content"
+            app:argType="string" />
+    </fragment>
+</navigation>
